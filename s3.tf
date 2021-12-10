@@ -1,9 +1,9 @@
 resource "aws_s3_bucket" "data-1" {
-	# checkov:skip=CKV_AWS_144: Because
-	# checkov:skip=CKV2_AWS_6: Because
-  bucket        = "${local.resource_prefix.value}-data-1"
+  # checkov:skip=CKV_AWS_144: Because
+  # checkov:skip=CKV2_AWS_6: Because
+  bucket = "${local.resource_prefix.value}-data-1"
   versioning {
-    enabled     = true
+    enabled = true
   }
   dynamic "logging" {
     for_each = var.logging
@@ -18,5 +18,8 @@ resource "aws_s3_bucket" "data-1" {
         sse_algorithm = "aws:kms"
       }
     }
+  }
+  tags = {
+    yor_trace = "f4488b10-0b9d-4c97-8b92-fd78f40317e3"
   }
 }
