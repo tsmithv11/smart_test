@@ -169,6 +169,8 @@ resource "aws_lb_listener" "lb_listener13" {
 
 resource "aws_lb_listener" "lb_listener14" {
   load_balancer_arn = aws_lb.front_end.arn
+  port              = "443"
+  protocol          = "HTTPS"
   certificate_arn   = "arn:aws:acm:eu-west-2:999999999:certificate/77777777-5d4a-457f-8888-02550c8c9244"
 
   default_action {
