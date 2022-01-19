@@ -8,7 +8,7 @@ resource "azurerm_resource_group" "az_rg" {
 }
 
 resource "azurerm_mssql_server" "mssql1" {
-  name                         = "mssql1"
+  name                         = "mssql1" 
   resource_group_name          = azurerm_resource_group.az_rg.name
   location                     = azurerm_resource_group.az_rg.location
   version                      = "12.0"
@@ -108,7 +108,7 @@ resource "azurerm_storage_account" "sa4" {
 }
 
 resource "azurerm_mssql_server" "mssql5" {
-  name                         = "mssql5"
+  name                         = "mssql5" 
   resource_group_name          = azurerm_resource_group.az_rg.name
   location                     = azurerm_resource_group.az_rg.location
   version                      = "12.0"
